@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "ee12efd4-679e-4be5-b446-442e49e6e114",
+		"name": "BOOKSHOP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32149436"
+	},
+	"item": [
+		{
+			"name": "Books Details",
+			"item": [
+				{
+					"name": "Post Book Details",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"isbn\": \"9781491950357\",\r\n    \"title\": \"Designing Data-Intensive Applications\",\r\n    \"author\": \"Martin Kleppmann\",\r\n    \"price\": 54.99,\r\n    \"publication_year\": 2017,\r\n    \"stock_count\": 30\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.6.58:2002/bookshop/addBooks",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"bookshop",
+								"addBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.6.58:2002/bookshop/allBooks",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"bookshop",
+								"allBooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by ISBN",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.6.58:2002/bookshop/isbn/9780131103627",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"bookshop",
+								"isbn",
+								"9780131103627"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.6.58:2002/bookshop/author/Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"bookshop",
+								"author",
+								"Eric Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book by Title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.6.58:2002/bookshop/title/Clean Code",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"bookshop",
+								"title",
+								"Clean Code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book by ISBN",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.6.58:2002/bookshop/delBook/9781491950355",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"bookshop",
+								"delBook",
+								"9781491950355"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book by ISBN",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"price\": 110.99,\r\n    \"stock_count\": 30\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.6.58:2002/bookshop/updateBook/9780136091813",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"bookshop",
+								"updateBook",
+								"9780136091813"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Registration",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Nagaa\",\r\n    \"email\": \"Nagasrii@example.com\",\r\n    \"password\": \"Nagasri1010\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.6.58:2002/user/register",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Post Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 3,\r\n    \"isbn\": \"9780131101630\",\r\n    \"review_text\": \"Good chapters but difficult examples\",\r\n    \"rating\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.6.58:2002/review/postReview",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"review",
+								"postReview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Review by ISBN",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.6.58:2002/review/book/9780131101630",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"review",
+								"book",
+								"9780131101630"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Review by UserId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.6.58:2002/review/getReview/2",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"6",
+								"58"
+							],
+							"port": "2002",
+							"path": [
+								"review",
+								"getReview",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

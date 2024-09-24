@@ -1,0 +1,29 @@
+BOOK SHOP PROJECT --- TABLES
+
+
+CREATE TABLE users_tbl (
+  user_id SERIAL PRIMARY KEY,  
+  username VARCHAR(100) UNIQUE NOT NULL,  
+  email VARCHAR(150) UNIQUE NOT NULL,  
+  password_hash TEXT NOT NULL,  
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,    
+);
+
+CREATE TABLE books_tbl (
+  isbn VARCHAR(13) PRIMARY KEY,  
+  title VARCHAR(255) NOT NULL,  
+  author VARCHAR(255) NOT NULL, 
+  price DECIMAL(10, 2) NOT NULL,  
+  publication_year INT,  
+  stock_count INT  
+);
+
+CREATE TABLE reviews_tbl (
+  review_id SERIAL PRIMARY KEY, 
+  user_id INT REFERENCES users_tbl(user_id),  
+  isbn VARCHAR(13) REFERENCES books_tbl(isbn),
+  review_text TEXT,  
+  rating INT CHECK (rating BETWEEN 1 AND 5),  
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+ );
+
